@@ -92,4 +92,15 @@ h1Text.split(' ')
   footer.innerText = siteContent['footer']['copyright'];
 
   // styling nav to green
-  nav.forEach(a=> a.style.color = 'green')
+  nav.forEach(a=> a.style.color = 'green');
+  
+
+  const home = document.createElement('a');
+  home.innerText = 'Home';
+  home.style.color = 'green'
+  const navTag = document.querySelector('nav');
+  navTag.prepend(home);
+  const lamba = document.createElement('a');
+  lamba.innerText = 'Lambda';
+  lamba.style.color = 'green';
+  navTag.appendChild(lamba);
