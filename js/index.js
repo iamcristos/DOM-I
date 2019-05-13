@@ -71,5 +71,10 @@ h1Text.split(' ')
   mainContent(0, "features-h4", "features-content" );
   mainContent(1, 'about-h4', 'about-content');
   const middleImg = document.getElementById('middle-img');
-  middleImg.src = siteContent['main-content']['middle-img-src']
+  middleImg.src = siteContent['main-content']['middle-img-src'];
+
+  // bottom-content div
+  mainContent(2, 'services-h4', 'services-content');
+  mainContent(3, 'product-h4', 'product-content');
+  mainContent(4, 'vision-h4', 'vision-content')
   
