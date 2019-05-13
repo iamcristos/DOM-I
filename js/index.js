@@ -51,3 +51,7 @@ const h1Text = siteContent.cta['h1'];
 h1Text.split(' ')
   .map(text => h1.innerHTML += `${text} <br>` )
   .join('')
+
+  // inserting buttons
+  const btn = document.querySelector('.cta-text button');
+  btn.innerText = siteContent.cta['button']
