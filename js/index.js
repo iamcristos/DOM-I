@@ -104,3 +104,6 @@ h1Text.split(' ')
   lamba.innerText = 'Lambda';
   lamba.style.color = 'green';
   navTag.appendChild(lamba);
+
+  // strech goals
+  
