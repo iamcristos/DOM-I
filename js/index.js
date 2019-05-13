@@ -54,4 +54,7 @@ h1Text.split(' ')
 
   // inserting buttons
   const btn = document.querySelector('.cta-text button');
-  btn.innerText = siteContent.cta['button']
+  btn.innerText = siteContent.cta['button'];
+  // adding h1 image
+  const img = document.getElementById('cta-img')
+  img.src = siteContent.cta['img-src']
