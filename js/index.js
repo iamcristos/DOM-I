@@ -58,3 +58,18 @@ h1Text.split(' ')
   // adding h1 image
   const img = document.getElementById('cta-img')
   img.src = siteContent.cta['img-src']
+  // main-content
+
+  const mainContent = (i, head, paragraph)=>{
+    const div = document.querySelectorAll('.text-content');
+    const h4 = div[i].children[0]
+    const p = div[i].children[1]
+    h4.innerText = siteContent['main-content'][`${head}`]
+    p.innerText = siteContent['main-content'][`${paragraph}`]
+  }
+  // top-content div
+  mainContent(0, "features-h4", "features-content" );
+  mainContent(1, 'about-h4', 'about-content');
+  const middleImg = document.getElementById('middle-img');
+  middleImg.src = siteContent['main-content']['middle-img-src']
+  
