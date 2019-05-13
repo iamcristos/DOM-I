@@ -76,5 +76,16 @@ h1Text.split(' ')
   // bottom-content div
   mainContent(2, 'services-h4', 'services-content');
   mainContent(3, 'product-h4', 'product-content');
-  mainContent(4, 'vision-h4', 'vision-content')
+  mainContent(4, 'vision-h4', 'vision-content');
+
+  const contact= document.querySelector('.contact')
+  const contactChild = (i, name)=> {
+    contact.children[i].innerText = siteContent.contact[`${name}`]
+  };
+  
+  contactChild(0,'contact-h4'); // contact h4
+  contactChild(1,'address') //contact address
+  contactChild(2, 'phone')  //contact phone
+  contactChild(3, 'email') //contact email
+
   
