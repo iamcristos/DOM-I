@@ -90,3 +90,6 @@ h1Text.split(' ')
 
   const footer = document.querySelector('footer p')
   footer.innerText = siteContent['footer']['copyright'];
+
+  // styling nav to green
+  nav.forEach(a=> a.style.color = 'green')
