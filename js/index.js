@@ -88,4 +88,5 @@ h1Text.split(' ')
   contactChild(2, 'phone')  //contact phone
   contactChild(3, 'email') //contact email
 
-  
+  const footer = document.querySelector('footer p')
+  footer.innerText = siteContent['footer']['copyright'];
