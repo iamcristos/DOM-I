@@ -46,4 +46,8 @@ let nav = document.querySelectorAll('nav a');
 nav.forEach((item,i)=> item.innerText = siteContent.nav[`nav-item-${i+1}`]);
 
 const h1 = document.querySelector('h1');
-h1.textContent = ct
+const h1Text = siteContent.cta['h1'];
+// inserting h1 text
+h1Text.split(' ')
+  .map(text => h1.innerHTML += `${text} <br>` )
+  .join('')
