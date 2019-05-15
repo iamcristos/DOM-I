@@ -40,3 +40,70 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+// selecting nav items
+let nav = document.querySelectorAll('nav a');
+
+nav.forEach((item,i)=> item.innerText = siteContent.nav[`nav-item-${i+1}`]);
+
+const h1 = document.querySelector('h1');
+const h1Text = siteContent.cta['h1'];
+// inserting h1 text
+h1Text.split(' ')
+  .map(text => h1.innerHTML += `${text} <br>` )
+  .join('')
+
+  // inserting buttons
+  const btn = document.querySelector('.cta-text button');
+  btn.innerText = siteContent.cta['button'];
+  // adding h1 image
+  const img = document.getElementById('cta-img')
+  img.src = siteContent.cta['img-src']
+  // main-content
+
+  const mainContent = (i, head, paragraph)=>{
+    const div = document.querySelectorAll('.text-content');
+    const h4 = div[i].children[0]
+    const p = div[i].children[1]
+    h4.innerText = siteContent['main-content'][`${head}`]
+    p.innerText = siteContent['main-content'][`${paragraph}`]
+  }
+  // top-content div
+  mainContent(0, "features-h4", "features-content" );
+  mainContent(1, 'about-h4', 'about-content');
+  const middleImg = document.getElementById('middle-img');
+  middleImg.src = siteContent['main-content']['middle-img-src'];
+
+  // bottom-content div
+  mainContent(2, 'services-h4', 'services-content');
+  mainContent(3, 'product-h4', 'product-content');
+  mainContent(4, 'vision-h4', 'vision-content');
+
+  const contact= document.querySelector('.contact')
+  const contactChild = (i, name)=> {
+    contact.children[i].innerText = siteContent.contact[`${name}`]
+  };
+  
+  contactChild(0,'contact-h4'); // contact h4
+  contactChild(1,'address') //contact address
+  contactChild(2, 'phone')  //contact phone
+  contactChild(3, 'email') //contact email
+
+  const footer = document.querySelector('footer p')
+  footer.innerText = siteContent['footer']['copyright'];
+
+  // styling nav to green
+  nav.forEach(a=> a.style.color = 'green');
+  
+
+  const home = document.createElement('a');
+  home.innerText = 'Home';
+  home.style.color = 'green'
+  const navTag = document.querySelector('nav');
+  navTag.prepend(home);
+  const lamba = document.createElement('a');
+  lamba.innerText = 'Lambda';
+  lamba.style.color = 'green';
+  navTag.appendChild(lamba);
+
+  // strech goals
+  
